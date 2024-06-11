@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+  <section class="profile">
+    <div class="profile-details">
+      <div class="profile-user">
+        <img src="images/image-jeremy.png" alt="avatar">
+        <p>Report for</p>
+        <h1>Jeremy Robson</h1>
+      </div>
+      <div class="context">
+        <button class="time-picker" id="daily-btn">Daily</button>
+        <button class="time-picker active" id="weekly-btn">Weekly</button>
+        <button class="time-picker" id="monthly-btn">Monthly</button>
+      </div>
+    </div>
+    <div class="profile-time-info">
+      <div class="card work-card">
+        <div class="card-bg work">
+          <img src="images/icon-work.svg" alt="work">
+        </div>
+        <div class="card-info">
+          <div class="title">
+            <p>Work</p>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="card-time-info">
+            <h1 id="time-info">32hrs</h1>
+            <p id="time-p-info">Last Week - 36hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="card play-card">
+        <div class="card-bg play">
+          <img src="images/icon-play.svg" alt="play">
+        </div>
+        <div class="card-info">
+          <div class="title">
+            <p>Play</p>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="card-time-info">
+            <h1 id="time-info">10hrs</h1>
+            <p id="time-p-info">Last Week - 8hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="card study-card">
+        <div class="card-bg study">
+          <img src="images/icon-study.svg" alt="study">
+        </div>
+        <div class="card-info">
+          <div class="title">
+            <p>Study</p>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="card-time-info">
+            <h1 id="time-info">4hrs</h1>
+            <p id="time-p-info">Last Week - 7hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="card exercise-card">
+        <div class="card-bg exercise">
+          <img src="images/icon-exercise.svg" alt="exercise">
+        </div>
+        <div class="card-info">
+          <div class="title">
+            <p>Exercise</p>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="card-time-info">
+            <h1 id="time-info">4hrs</h1>
+            <p id="time-p-info">Last Week - 5hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="card social-card">
+        <div class="card-bg social">
+          <img src="images/icon-social.svg" alt="Social">
+        </div>
+        <div class="card-info">
+          <div class="title">
+            <p>Social</p>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="card-time-info">
+            <h1 id="time-info">5hrs</h1>
+            <p id="time-p-info">Last Week - 10hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="card self-care-card">
+        <div class="card-bg self-care">
+          <img src="images/icon-self-care.svg" alt="self-care">
+        </div>
+        <div class="card-info">
+          <div class="title">
+            <p>Self Care</p>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="card-time-info">
+            <h1 id="time-info">2hrs</h1>
+            <p id="time-p-info">Last Week - 2hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
