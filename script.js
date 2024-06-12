@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const timePInfo = card.querySelector("p")
 
             timeInfo.textContent = `${item.timeframes[timeframe].current}hrs`
-            timePInfo.textContent = `Last Week - ${item.timeframes[timeframe].previous}hrs`
+            timePInfo.textContent = `Last ${timeframe} - ${item.timeframes[timeframe].previous}hrs`
         })
     }
 
